@@ -1,6 +1,7 @@
 # Python script to configure UPNP
 
 import os
+from time import sleep
 
 regionID = None
 while(regionID is None):
