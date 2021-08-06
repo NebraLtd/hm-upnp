@@ -1,6 +1,6 @@
 # Python script to configure UPNP
 
-import os
+import subprocess
 from time import sleep
 
 regionID = None
@@ -23,4 +23,4 @@ while(regionID is None):
 
 print("Configuring Upnp")
 
-os.system('upnpc -e "Nebra Helium" -r 44158 TCP')
+subprocess.run(["/usr/bin/upnpc", "-e", "Nebra Helium", "-r", "44158", "TCP"])
