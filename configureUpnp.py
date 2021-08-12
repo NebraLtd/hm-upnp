@@ -1,6 +1,6 @@
 # Python script to configure UPNP
 
-import subprocess
+import subprocess  # nosec (B404)
 from time import sleep
 
 regionID = None
@@ -23,4 +23,4 @@ while(regionID is None):
 
 print("Configuring Upnp")
 
-subprocess.run(["/usr/bin/upnpc", "-e", "Nebra Helium", "-r", "44158", "TCP"])
+subprocess.run(["/usr/bin/upnpc", "-e", "Nebra Helium", "-r", "44158", "TCP"])  # nosec (B603)
