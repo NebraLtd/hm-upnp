@@ -1,6 +1,6 @@
 # Docker Container that runs the UPNP to configure the container
 
-FROM balenalib/genericx86-64-ext-alpine:3.12.4
+FROM balenalib/genericx86-64-ext-alpine:3.12-20210923
 
 RUN apk add --no-cache \
     miniupnpc=2.1.20191224-r0 \
