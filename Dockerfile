@@ -10,8 +10,9 @@ RUN \
     apt-get update && \
     DEBIAN_FRONTEND="noninteractive" \
     TZ="$SYSTEM_TIMEZONE" \
-    apt-get install -y \
-    miniupnpc=2.1.20191224-r0 && \
+      apt-get install -y \
+        miniupnpc \
+        --no-install-recommends && \
     apt-get autoremove -y && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
