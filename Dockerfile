@@ -6,6 +6,7 @@ FROM balenalib/raspberry-pi-debian-python:buster-run-20210705
 
 ARG SYSTEM_TIMEZONE
 
+# hadolint ignore=DL3008
 RUN \
     apt-get update && \
     DEBIAN_FRONTEND="noninteractive" \
