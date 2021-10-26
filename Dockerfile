@@ -4,7 +4,7 @@ FROM balenalib/raspberry-pi-debian-python:buster-run-20211014
 
 RUN \
     install_packages \
-        miniupnpc \
+        miniupnpc
 
 WORKDIR /opt/nebra/upnp
 
