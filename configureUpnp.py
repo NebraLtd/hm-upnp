@@ -1,7 +1,15 @@
 # Python script to configure UPNP
 
-import subprocess  # nosec (B404)
+import os
+import subprocess  # nosec
+import sentry_sdk
 from time import sleep
+
+
+SENTRY_UPNP = os.getenv("SENTRY_UPNP")
+sentry_sdk.init(
+    SENTRY_UPNP,
+)
 
 regionID = None
 while(regionID is None):
